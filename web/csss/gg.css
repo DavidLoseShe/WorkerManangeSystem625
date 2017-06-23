@@ -1,0 +1,30 @@
+body{
+    positon:relative;
+    width:100%;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.428571429;
+    color: #333333;
+    background-color: #ffffff;
+}
+#head{
+    position:relative;
+    width:78%;
+    height:100px;
+    margin-left:11%;
+    background:#D8D8D8;
+}
+#content{
+position:relative;
+width:78%;
+margin-left:11%;
+min-height:380px;
+}
+#foot{
+    position:relative;
+    width:78%;
+    min-height:120px;
+    margin-left:11%;
+    margin-top:10px;
+    background:#EDEDED;
+}
