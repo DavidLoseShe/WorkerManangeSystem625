@@ -14,7 +14,10 @@
         <result name="1" type="dispatcher">/index.jsp</result>
     </action>
     <action name="Worker" class="service.workerService" method="info_action">
-        <result name="1" type="dispatcher">/index.jsp</result>
+        <result name="1" type="dispatcher">/worker.jsp</result>
+    </action>
+    <action name="Coms" class="service.ComService" method="cominfo">
+        <result name="3" >/chaxun.jsp</result>
     </action>
 
 </package>

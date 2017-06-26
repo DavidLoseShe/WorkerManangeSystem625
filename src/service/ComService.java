@@ -1,5 +1,6 @@
 package service;
 
+import Dao.dao;
 import com.opensymphony.xwork2.ActionSupport;
 import entity.Com;
 import entity.Worker;
@@ -12,6 +13,15 @@ import java.util.List;
 public class ComService extends ActionSupport {
     String username;
     List<Worker> list;
+    List<Com> comList;
+
+    public List<Com> getComList() {
+        return comList;
+    }
+
+    public void setComList(List<Com> comList) {
+        this.comList = comList;
+    }
 
     public String getUsername() {
         return username;
@@ -36,14 +46,26 @@ public class ComService extends ActionSupport {
         comService.setCno(username);
 
         list = comService.select_info();
-
+        dao dd = new dao();
+        comList= dd.comList();
         for (int i = 0; i < list.size(); i++) {
             System.out.print(list.get(i).getWname());
 
         }
         if(list!=null)
-        return "1";
+            return "1";
         else return "0";
+    }
+    public String cominfo(){
+
+        dao d = new dao();
+        comList= d.comList();
+        for(Com com:comList) {
+
+            System.out.println( com.getCname());
+        }
+        return "3";
     }
 
 }
+

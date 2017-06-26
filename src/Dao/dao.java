@@ -1,5 +1,6 @@
 package Dao;
 
+import entity.Com;
 import entity.Worker;
 import entity.humen;
 import org.hibernate.Session;
@@ -38,4 +39,17 @@ public class dao {
         }
         return  worker;
     }
+    public List<Com> comList(){
+        List<Com> coms = null;
+        String hql = "from Com";
+        Session session = Main.getSession();
+        Query query =session.createQuery(hql);
+        coms =query.list();
+        return coms;
+
+    }
+    public void inserWorker(Worker worker){
+
+    }
+
 }
