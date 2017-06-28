@@ -11,13 +11,13 @@
 <package name="struts" extends="struts-default" namespace="/">
 
     <action name="Student" class="service.ComService" method="Add">
-        <result name="1" type="dispatcher">/index.jsp</result>
+        <result name="1" type="dispatcher">/workertable.jsp</result>
     </action>
     <action name="Worker" class="service.workerService" method="info_action">
-        <result name="1" type="dispatcher">/worker.jsp</result>
+        <result name="1" type="dispatcher">/workerinfomation.jsp</result>
     </action>
     <action name="Coms" class="service.ComService" method="cominfo">
-        <result name="3" >/chaxun.jsp</result>
+        <result name="3"  >/main.jsp</result>
     </action>
 
 </package>
