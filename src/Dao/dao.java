@@ -41,12 +41,21 @@ public class dao {
     }
     public List<Com> comList(){
         List<Com> coms = null;
-        String hql = "from Com";
+        String hql = "from Com where eno=null ";
         Session session = Main.getSession();
         Query query =session.createQuery(hql);
         coms =query.list();
         return coms;
 
+    }
+    public List<Com> comlist(String no){
+        List<Com> coms = null;
+        String hql = "from Com where  eno=?1";
+        Session session = Main.getSession();
+        Query query =session.createQuery(hql);
+        query.setParameter(1, no);
+        coms =query.list();
+        return coms;
     }
     public void inserWorker(Worker worker){
 

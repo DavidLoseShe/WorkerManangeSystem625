@@ -60,11 +60,17 @@ public class ComService extends ActionSupport {
 
         dao d = new dao();
         comList= d.comList();
-        for(Com com:comList) {
 
+        return "3";
+    }
+    public String coms(){
+        dao d = new dao();
+        comList =d.comlist(username);
+
+        for(Com com:comList) {
             System.out.println( com.getCname());
         }
-        return "3";
+        return "m";
     }
 
 }

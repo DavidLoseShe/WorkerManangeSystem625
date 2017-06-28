@@ -29,13 +29,46 @@ alert("敬请期待！待开发")
             $("select").show();
             $("#ifr").show();
         }
+        function xuanze(obje) {
+            var list=new Array();
+            $.ajax({
+                url: "Com.action?username="+$(obje).val(),
+                type: "POST",
+                data: "",
+                dataType: "json",
+                success: function (data) {
+                    if(data.comList!=null){
+                    var  path=null;
+                    path= "<select onchange='xuanze(this)'><option value=''>--请选择部门-- </option>";
+                    $.each(data.comList,function(i,value1) {
+                       path = path + "<option value="+value1.cno+">" + value1.cname + "</option>";
+                    });
+                    path=path+"</select>";
+                    $("#message").append(path);
+                  /*$("#message").append("<select onchange='xuanze(this)'>"
+                    +"<option value=' '>"
+                    + "   --请选择部门--"
+                      + "    </option>"
+                      + " <s:iterator value="list" var='com' >"
+                      + "   <option  value=${com.cno}>"
+                      + " ${com.cname}"
+                      + " </option> "
+                      + " </s:iterator>"
+                      + " </select>");*/
+
+                }
+                }
+            });
+            window.open('Student.action?username='+$(obje).val(),'posthere')
+        }
     </script>
 </head>
 <body>
 <div id="head" align="center" style="font-size: 40px">欢&nbsp;迎&nbsp;使&nbsp;用&nbsp;本&nbsp;系&nbsp;统</div>
 <div id="content" align="center">
     <br>
-<select onchange="javascript:window.open('Student.action?username='+this.value,'posthere')">
+    <div id="message">
+<select onchange="xuanze(this)">
     <option value=" ">
         --请选择部门--
     </option>
@@ -45,7 +78,7 @@ alert("敬请期待！待开发")
         </option>
     </s:iterator>
 </select>
-
+</div>
     <button onclick=" insert()" value="" id="insert" style="height:40px;width:200px;">插入员工</button>
     <%--&nbsp;&nbsp;&nbsp;&nbsp;--%>
     <br>
