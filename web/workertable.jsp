@@ -40,7 +40,7 @@ a{
         </tr>
       </s:iterator>
 </table>
-    <a href="index.jsp" target="_parent" >返回首页</a>
+
 </div>
 <div id="foot"></div>
 </body>

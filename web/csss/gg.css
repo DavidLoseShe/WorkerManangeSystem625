@@ -3,24 +3,84 @@ body{
     padding:0px;
 }
 #head{
-    position:relative;
     width:78%;
     height:100px;
     margin-left:11%;
-    background:#D8D8D8;
+    background-image: url("../img/timg.jpg");
 
 }
 #content{
-position:relative;
 width:78%;
 margin-left:11%;
-min-height:380px;
+min-height:480px;
 }
-#foot{
+#Left{
+    float:left;
+    min-height:480px;
+    width:25%;
+    background: #dffffa;
+}
+#message{
+    float:left;
+    min-height:480px;
+    width:48%;
     position:relative;
+    left:10px;
+    background: #efffe9;
+}
+#right{
+    float:right;
+    min-height:480px;
+    width:25%;
+    background: #e4ffcc;
+}
+
+#foot{
     width:78%;
-    min-height:120px;
+    background-color: #d8ddc6;
     margin-left:11%;
-    margin-top:10px;
-    background:#EDEDED;
+    text-align:center;
+    vertical-align:middle;
+    line-height: 70px;
+    font-size:22px;
+}
+
+
+#menu{
+    width:100%;
+    height:40px;
+    background-color:rgba(24,127,215,1);
+    position:relative;
+    left:0px;
+    top:0px;
+
+}
+.nav{
+    list-style-type:none;
+    color:#FFF;
+    line-height:40px;
+    font-family:"黑体";
+    font-size:20px;
+}
+.nav li{
+    float:left;
+}
+.nav li a{
+    text-decoration:none;
+    width:160px;
+    display:block;
+    text-align:center;
+    border-left:1px solid white;
+}
+.nav li a:link{
+    color:#FFF;
+}
+.nav li a:visited{
+    color:#FFF;
+}
+.nav li a:hover{
+    background-color: rgb(238, 235, 231);
+}
+.nav li a:active{
+    color:#0FF;
 }
